@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Search, X, BookOpen, User } from "lucide-react";
 import { notes, categories, searchNotes } from "@/data/notes";
 import { Button } from "@/components/ui/button";
+import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -211,6 +212,9 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      {/* Newsletter Subscribe */}
+      <NewsletterSubscribe />
     </div>
   );
 }

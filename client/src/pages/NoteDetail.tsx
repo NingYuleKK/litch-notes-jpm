@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { getNoteById } from "@/data/notes";
 import { Streamdown } from "streamdown";
 import NotFound from "./NotFound";
+import GiscusComments from "@/components/GiscusComments";
 
 export default function NoteDetail() {
   const [match, params] = useRoute("/note/:id");
@@ -64,6 +65,9 @@ export default function NoteDetail() {
           <div className="prose-note">
             <Streamdown>{note.content}</Streamdown>
           </div>
+
+          {/* Giscus Comments */}
+          <GiscusComments />
 
           {/* Footer */}
           <footer className="mt-12 pt-8 border-t border-border">
